@@ -184,14 +184,34 @@
  }
 
  footer{
- 	background-color: #09271E;
+ 	background-color:#202F07;
  	overflow: hidden;
+ 	padding: 1em 0px;
  	section{
  		padding:5px;
+ 		width: 50%;
+ 		float: left;
+ 		border-right: 1px solid #2F070C;
+ 		border-left: 1px solid #34602F;
+ 		min-height:100px;
  		ul{
  			li{
- 				float: left;
- 				display: inline-block;
+ 				text-align: center;
+ 				list-style-type: none;
+ 				font-weight: bolder;
+ 				&:hover{
+ 					a{
+ 						background-color:transparent;
+ 						text-decoration: underline;
+ 						color:#34602F;
+ 						display: block;
+ 					}
+ 				}
+ 				a{
+ 					color:#253D2F;
+ 					background-color:transparent;
+ 					text-decoration: none;
+ 				}
  			}
  		}
  	}
@@ -266,6 +286,11 @@
  				}
 
  			}
+ 		}
+ 	}
+ 	footer{
+ 		section{
+ 			width: 25%
  		}
  	}
  }

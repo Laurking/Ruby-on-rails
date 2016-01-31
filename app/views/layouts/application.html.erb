@@ -39,7 +39,7 @@
 						<% if user_signed_in? %>
 						<li><a href="#"><%= image_tag("/assets/post.png")%>Create posts</a></li>
 						<li>
-						<%= link_to image_tag("signout.png")+"Sign out ", destroy_user_session_path, :method => :delete %>
+							<%= link_to image_tag("signout.png")+"Sign out ", destroy_user_session_path, :method => :delete %>
 						</li>
 						<% else %>
 						<li><a href="/users/sign_in"><%= image_tag("/assets/about1.png")%>Sign In</a></li>
@@ -51,20 +51,41 @@
 		</header>
 		<main>
 
-		<%= yield %>
+			<%= yield %>
 
-	</main>
-	<footer>
-		<section>
-			<ul>
-				<li><a href="#">Our locations</a></li>
-				<li><a href="">Blog</a></li>
-				<li><a href="">Update</a></li>
-				<li><a href="">Network</a></li>
-				<li><a href="">Events</a></li>
-			</ul>
-		</section>
-	</footer>
-	
-</body>
-</html>
+		</main>
+		<footer>
+			<section>
+				<ul>
+					<li><a href="#"><span>Our location</span><br><span>901 Walton Avenue Apt#14</span><br><span>New york, NY 10452</span></a></li>
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li><a href=""><span>Quick Access</span><br><span>1-(646)3936260</span><br></a></li><br>
+					<li><a href=""><span>Quick Access</span><br><span>1-(646)3936260</span><br></a></li>
+					
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li><a href="#">Our locations</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Update</a></li>
+					<li><a href="">Network</a></li>
+					<li><a href="">Events</a></li>
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li><a href="#">Our locations</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Update</a></li>
+					<li><a href="">Network</a></li>
+					<li><a href="">Events</a></li>
+				</ul>
+			</section>
+		</footer>
+
+	</body>
+	</html>
