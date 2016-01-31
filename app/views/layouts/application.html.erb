@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<section id="container">
+		<header>
+			<nav>
+				<section class="social">
+					<section>
+						<a href="#"><%= image_tag("/assets/facebook.png")%></a>
+						<a href="#"><%= image_tag("/assets/twitter.png")%></a>
+						<a href="#"><%= image_tag("/assets/linkedin.png")%></a>
+						<a href="#"><%= image_tag("/assets/googleplus.png")%></a>
+					</section>
+				</section>
+				<section class="brand">
+					<h2>MariAlex<%= image_tag("/assets/logo.png")%> </h2>
+					<h2 id="menu_ic"><%= image_tag("/assets/menu_ic.png")%></h2>
+				</section>
+
+				<section id="navigation" class="navigation mobile">
+					<ul>
+						<li><a href="#"><%= image_tag("/assets/home1.png")%>Home</a></li>
+						<li><a href="#"><%= image_tag("/assets/learn1.png")%>Learn</a></li>
+						<li><a href="#"><%= image_tag("/assets/teach1.png")%>Teach</a></li>
+						<li><a href="#"><%= image_tag("/assets/programs1.png")%>Programs</a></li>
+						<li><a href="#"><%= image_tag("/assets/about1.png")%>About</a></li>
+						<li><a href="#"><%= image_tag("/assets/contact1.png")%>Contact</a></li>
+					</ul>
+				</section>
+				
+				<section class="register-signup">
+					<ul>
+						<% if user_signed_in? %>
+						<li><a href="#"><%= image_tag("/assets/post.png")%>Create posts</a></li>
+						<li>
+						<%= link_to image_tag("signout.png")+"Sign out ", destroy_user_session_path, :method => :delete %>
+						</li>
+						<% else %>
+						<li><a href="/users/sign_in"><%= image_tag("/assets/about1.png")%>Sign In</a></li>
+						<li><a href="/users/sign_up"><%= image_tag("/assets/sign_up.png")%>Sign up</a></li>
+						<% end %>
+					</ul>
+				</section>
+			</nav>
+		</header>
+		<main>
+
+		<%= yield %>
+
+	</main>
+	<footer>
+		<section>
+			<ul>
+				<li><a href="#">Our locations</a></li>
+				<li><a href="">Blog</a></li>
+				<li><a href="">Update</a></li>
+				<li><a href="">Network</a></li>
+				<li><a href="">Events</a></li>
+			</ul>
+		</section>
+	</footer>
+	
+</body>
+</html>

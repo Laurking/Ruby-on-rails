@@ -1,0 +1,287 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ *{
+ 	-moz-box-sizing:border-box;
+ 	-webkit-box-sizing:border-box;
+ 	-o-box-sizing:border-box;
+ 	box-sizing:border-box;
+ 	margin: 0px;
+ 	padding: 0px;
+ }
+ #container{
+ 	width: 100%;
+ 	background-color:#F0F0F0;
+
+ 	header,main,footer{
+ 		width: 100%;
+ 	}
+ }
+
+ header{
+
+ 	nav{
+ 		width: 100%;
+ 		.social{
+ 			width: 100%;
+ 			padding: 5px;
+ 			overflow: hidden;
+ 			background-color: #FFF;
+ 			a{
+ 				width:20px;
+ 				height:20px;
+ 				display: block;
+ 				float:left;
+ 				margin-right: 5px;
+ 				text-decoration: none;
+ 				&:hover{
+ 					outline: none;
+ 					img{
+ 						background-color: white;
+ 					}
+ 				}
+ 				img{
+ 					width:100%;
+ 					height:100%;
+ 					background-color: #ccc;
+ 					-moz-border-radius:100%;
+ 					-webkit-border-radius:100%;
+ 					-o-border-radius:100%;
+ 					border-radius:100%;
+ 				}
+ 			}
+ 		}
+ 		.brand{
+ 			width: 100%;
+ 			text-align: center;
+ 			overflow: hidden;
+ 			background-color:#000;
+ 			font-size: 1.2em;
+ 			color:#FFF;
+ 			h2{
+ 				display: inline-block;
+ 				&:nth-child(1){
+ 					clear:both;
+ 					font-size: 1.5em;
+ 					font-family: Times New Roman;
+ 					margin-top:8px;
+ 					img{
+ 						width: 40px;
+ 						height:40px;
+ 						position: absolute;
+ 						top:5px;
+ 					}
+
+ 				}
+ 				&:nth-child(2){
+ 					float: right;
+ 					width: 60px;
+ 					height:50px;
+ 					cursor: pointer;
+ 					&:hover{
+ 						-moz-border-radius:7px;
+ 						-webkit-border-radius:7px;
+ 						-o-border-radius:7px;
+ 						border-radius:7px;
+ 						border: 1px solid #FFF;
+ 					}
+ 					img{
+ 						width: 100%;
+ 						height: 100%;
+ 					}
+ 				}
+
+ 			}
+
+ 		}
+ 	}
+ 	.navigation{
+ 		background-color:#222;
+ 		display: none;
+ 		ul{
+ 			width: 100%;
+ 			li{
+ 				line-height:35px;
+ 				padding-left: 10px;
+ 				font-size: 1em;
+ 				border-bottom: 1px solid #000;
+ 				&:hover{
+ 					background-color:#FFF;
+ 					a{
+ 						color:#000;
+ 						text-decoration: none;
+ 					}
+ 				}
+ 				a{
+ 					text-decoration: none;
+ 					color: #FFF;
+ 					img{
+ 						width:20px;
+ 						height:20px;
+ 						margin-right: 10px;
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+ 	.register-signup{
+ 		ul{
+ 			width: 100%;
+ 			border-bottom: 1px solid #444;
+ 			overflow: hidden;
+ 			li{
+ 				width: 50%;
+ 				float: left;
+ 				text-align: center;
+ 				line-height:48px;
+ 				list-style-type: none;
+ 				cursor: pointer;
+ 				border-bottom:1px solid #FFF;
+ 				a{
+ 					text-decoration: none;
+ 					display: block;
+ 					color: #000;
+ 					background-color: transparent;
+ 				}
+ 				&:first-of-type{
+ 					border-right:1px solid #999;
+ 				}
+ 				&:last-of-type{
+ 					border-left:1px solid #fff;
+ 				}
+
+ 				&:hover{
+ 					background-color: #ccc;
+ 					a{
+ 						color: #fff;
+ 					}
+ 				}
+
+ 				img{
+ 					width:30px;
+ 					height:20px;
+ 					margin:2px;
+ 				}
+ 			}
+ 		}
+ 	}
+ }
+ main{
+ 	clear: both;
+ }
+
+ footer{
+ 	background-color: #09271E;
+ 	overflow: hidden;
+ 	section{
+ 		padding:5px;
+ 		ul{
+ 			li{
+ 				float: left;
+ 				display: inline-block;
+ 			}
+ 		}
+ 	}
+ }
+
+ @media only screen and (min-width:768px){
+ 	header{
+ 		padding-bottom: 0px;
+ 		nav{
+ 			border-bottom: #000;
+ 			overflow: hidden;
+ 			background-color: #444;
+  			.social{
+ 				background-color: transparent;
+ 				section{
+ 					float: right;
+ 				}
+ 			}
+ 			#menu_ic{
+ 				display: none;
+ 			}
+ 			.brand{
+ 				background-color:#232827;
+ 				h2{
+ 					margin-top:0px;
+ 					margin-bottom:10px;
+ 				}
+ 			}
+ 			#navigation,.register-signup{
+ 				display: inline-block;
+ 			}
+ 			#navigation{
+ 				background-color:#091914;
+ 				ul{
+ 					li{
+ 						width:85px;
+ 						line-height:47px;
+ 						position: relative;
+ 						float: left;
+ 						text-align: center;
+ 						list-style-type: none;
+ 						border-bottom:none;
+ 						&:hover{
+ 							a{
+ 								color:#444;
+ 							}
+ 						}
+ 						a{
+ 							text-decoration: none;
+ 							color: #F0F0F0;
+ 							img{
+ 								position: absolute;
+ 								top:-10px;
+ 								right: 17px;
+ 								background-color: transparent;
+ 								border: none;
+ 							}
+ 						}
+ 					}
+ 				}
+ 			}
+ 			.register-signup{
+ 				float: right;
+ 				width:250px;
+ 				padding: 0px;
+ 				ul{
+ 					border-bottom: none;
+ 					li{
+ 						border-bottom:none;
+ 						background-color: #ccc;
+ 					}
+ 				}
+
+ 			}
+ 		}
+ 	}
+ }
+
+.active-list-item{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f5f6+0,e3eaed+37,c8d7dc+100;Grey+3D+%234 */
+background: #f2f5f6; /* Old browsers */
+background: -moz-linear-gradient(top,  #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+
+
+
