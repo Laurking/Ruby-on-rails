@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 $(function(){
-	var image="image1.jpg image2.jpg image5.jpg".split(" ")
-	var count=0;
+	var image="image1.jpg image2.jpg image5.jpg".split(" ");
+	var count=-1;
 	var counter=5000;
 	$("#menu_ic").click(function(){
 		$("#navigation").slideToggle();
@@ -35,4 +35,5 @@ $(function(){
 	},counter)
 
 
+	
 })

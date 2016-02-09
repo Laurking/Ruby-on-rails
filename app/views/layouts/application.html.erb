@@ -3,6 +3,9 @@
 <head>
 	<title>Blog</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<link href="/assets/form.scss" media="all" rel="stylesheet" />
+
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
@@ -25,19 +28,19 @@
 
 				<section id="navigation" class="navigation mobile">
 					<ul>
-						<li><a href="#"><%= image_tag("/assets/home1.png")%>Home</a></li>
-						<li><a href="#"><%= image_tag("/assets/learn1.png")%>Learn</a></li>
-						<li><a href="#"><%= image_tag("/assets/teach1.png")%>Teach</a></li>
-						<li><a href="#"><%= image_tag("/assets/programs1.png")%>Programs</a></li>
-						<li><a href="#"><%= image_tag("/assets/about1.png")%>About</a></li>
-						<li><a href="#"><%= image_tag("/assets/contact1.png")%>Contact</a></li>
+						<li><a href="/pages/index"><%= image_tag("/assets/home1.png")%>Home</a></li>
+						<li><a href="/pages/learn"><%= image_tag("/assets/learn1.png")%>Learn</a></li>
+						<li><a href="/pages/teach"><%= image_tag("/assets/teach1.png")%>Teach</a></li>
+						<li><a href="/pages/programs"><%= image_tag("/assets/programs1.png")%>Programs</a></li>
+						<li><a href="/pages/about"><%= image_tag("/assets/about1.png")%>About</a></li>
+						<li><a href="/pages/contact"><%= image_tag("/assets/contact1.png")%>Contact</a></li>
 					</ul>
 				</section>
 				
 				<section class="register-signup">
 					<ul>
 						<% if user_signed_in? %>
-						<li><a href="#"><%= image_tag("/assets/post.png")%>Create posts</a></li>
+						<li><a href="#"><%= image_tag("/assets/post.png")%>New school</a></li>
 						<li>
 							<%= link_to image_tag("signout.png")+"Sign out ", destroy_user_session_path, :method => :delete %>
 						</li>
@@ -50,7 +53,11 @@
 			</nav>
 		</header>
 		<main>
-
+			<section class="alert-notice">
+				<% flash.each do |name, msg| %>
+				<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+				<% end %>
+			</section>
 			<%= yield %>
 
 		</main>

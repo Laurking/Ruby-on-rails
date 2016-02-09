@@ -43,4 +43,5 @@ Rails.application.configure do
   config.assets.debug = false
   config.assets.css_compressor = :sass
   config.assets.compile = true
-end
+
+  end

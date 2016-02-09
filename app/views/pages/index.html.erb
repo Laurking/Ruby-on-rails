@@ -1,3 +1,33 @@
+<% if user_signed_in? %>
+<section id="big-wrapper1" class="big-wrapper1" >
+	<section class="wrapper">
+		<form class="searchbox_1" action="">
+			<input type="search" class="search_1" placeholder="Search" />
+			<button type="submit" class="submit_1" value="search">Search</button>
+		</form>
+	</section>
+	<section id="selections" class="selections">
+		<h2>Just one click away!</h2>
+		<section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+			<section class="item"><section><a href="#">Jobs</a></section></section>
+
+		</section>
+	</section>
+</section>
+
+<% else %>
+
 <section id="big-wrapper">
 	<section id="carousel" class="wrapper">
 		<section class="container">
@@ -6,7 +36,7 @@
 				<h4>Start as a kid</h4>
 				<h4>or</h4>
 				<h4>Start width kids</h4>
-				<h6><a href="#"><button>Start here</button></a></h6>
+				<h6><a href="/users/sign_in"><button>Start here</button></a></h6>
 				<ul class="list-item">
 					<li></li>
 					<li></li>
@@ -34,4 +64,5 @@
 	</section>
 </section>
 
+<% end %>
 
